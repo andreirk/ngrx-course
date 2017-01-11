@@ -13,6 +13,6 @@ app.use(bodyParser.json());
 apiGetUserThreads(app);
 
 
-app.listen(8090, () => {
-    console.log('Server is now running on port 8090 ...');
+app.listen(8070, () => {
+    console.log('Server is now running on port 8070 ...');
 });

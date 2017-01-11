@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Store} from "@ngrx/store";
+import {AppState} from "../store/app-state";
 
 @Component({
   selector: 'message-section',
@@ -7,7 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MessageSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor(private store: Store<AppState>) {
+    store.subscribe(state => console.log('message section recive state: ', state))
+  }
 
   ngOnInit() {
   }
